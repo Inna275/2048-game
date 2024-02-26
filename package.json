@@ -1,0 +1,29 @@
+{
+  "name": "2048-game",
+  "version": "1.0.0",
+  "description": "My version of the popular game 2048. Implemented using HTML, CSS and JavaScript.",
+  "main": "main.js",
+  "scripts": {
+    "lint": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Inna275/2048-game.git"
+  },
+  "keywords": [
+    "2048",
+    "game",
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "author": "Inna Denysiuk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Inna275/2048-game/issues"
+  },
+  "homepage": "https://github.com/Inna275/2048-game#readme",
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
+}
