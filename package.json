@@ -2,7 +2,7 @@
   "name": "2048-game",
   "version": "1.0.0",
   "description": "My version of the popular game 2048. Implemented using HTML, CSS and JavaScript.",
-  "main": "main.js",
+  "main": "src/js/main.js",
   "scripts": {
     "lint": "eslint . --fix"
   },
