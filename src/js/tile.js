@@ -4,6 +4,7 @@ class Tile {
   constructor() {
     this.value = this.getInitTileNumber();
     this.element = this.createTileElement();
+    this.animateAppearance();
   }
 
   getInitTileNumber() {
@@ -17,6 +18,12 @@ class Tile {
     element.style.backgroundColor = TILE_COLORS[this.value];
     return element;
   }
+
+  animateAppearance() {
+    setTimeout(() => {
+      this.element.style.transform = 'scale(1)';
+    }, 100);
+  } 
 }
 
 export { Tile };

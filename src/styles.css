@@ -39,4 +39,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: scale(0.3);
+  transition: transform 100ms ease-in-out;
 }
