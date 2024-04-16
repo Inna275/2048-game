@@ -25,6 +25,13 @@ class Cell {
     this.tile = null;
     this.element.innerHTML = '';
   }
+
+  animateMerge() {
+    this.element.classList.add('tile-merge');
+    setTimeout(() => {
+      this.element.classList.remove('tile-merge');
+    }, 100);
+  }
 }
 
 export { Cell };

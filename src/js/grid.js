@@ -91,6 +91,7 @@ class Grid {
     targetTile.doubleValue();
     targetTile.updateElement();
     targetTile.markAsMerged();
+    targetCell.animateMerge();
     cell.clear();
   }
 
