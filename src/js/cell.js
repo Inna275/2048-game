@@ -20,6 +20,11 @@ class Cell {
   isEmpty() {
     return this.tile === null;
   }
+
+  clear() {
+    this.tile = null;
+    this.element.innerHTML = '';
+  }
 }
 
 export { Cell };

@@ -5,6 +5,7 @@ class Tile {
     this.value = this.getInitTileNumber();
     this.element = this.createTileElement();
     this.animateAppearance();
+    this.merged = false;
   }
 
   getInitTileNumber() {
@@ -24,6 +25,23 @@ class Tile {
       this.element.style.transform = 'scale(1)';
     }, 100);
   } 
+
+  doubleValue() {
+    this.value *= 2;
+  }
+
+  updateElement() {
+    this.element.textContent = this.value;
+    this.element.style.backgroundColor = TILE_COLORS[this.value];
+  }
+
+  markAsMerged() {
+    this.merged = true;
+  }
+
+  resetMerged() {
+    this.merged = false;
+  }
 }
 
 export { Tile };

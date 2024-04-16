@@ -4,6 +4,10 @@ const TWO_CHANCE = 0.9;
 
 const START_TILES = 2;
 
+const LAST_INDEX = GRID_SIZE - 1;
+
+const FIRST_INDEX = 0;
+
 const TILE_COLORS = {
   2: '#f91e52',
   4: '#fe8b4b',
@@ -18,7 +22,53 @@ const TILE_COLORS = {
   2048: '#a024f5',
 };
 
+const KEY_TO_DIRECTION = {
+  'ArrowUp': 'up',
+  'ArrowDown': 'down',
+  'ArrowLeft': 'left',
+  'ArrowRight': 'right',
+};
+
+const MOVE_DATA = {
+  'up': {
+    start: 1,
+    end: GRID_SIZE,
+    step: 1,
+    isVertical: true,
+    isForward: true,
+  },
+
+  'down': {
+    start: GRID_SIZE - 2,
+    end: -1,
+    step: -1,
+    isVertical: true,
+    isForward: false,
+  },
+
+  'left': {
+    start: 1,
+    end: GRID_SIZE,
+    step: 1,
+    isVertical: false,
+    isForward: true,
+  },
+
+  'right': {
+    start: GRID_SIZE - 2,
+    end: -1,
+    step: -1,
+    isVertical: false,
+    isForward: false,
+  },
+};
+
 export { GRID_SIZE, 
          TWO_CHANCE, 
          START_TILES, 
-         TILE_COLORS };
+         LAST_INDEX, 
+         FIRST_INDEX,
+         TILE_COLORS,
+         KEY_TO_DIRECTION,
+         MOVE_DATA, 
+        };
