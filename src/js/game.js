@@ -1,15 +1,16 @@
 import { END_GAME_DELAY, MESSAGES } from './constants.js';
 
-const checkGameStatus = (grid) => {
-  if (shouldEndGame(grid)) {
-    setTimeout(() => {
-      endGame(grid);
-    }, END_GAME_DELAY);
-  }
+const resetGame = (grid) => {
+  grid.clear();
+  grid.resetReached2048();
+  grid.setupGrid();
 };
 
-const shouldEndGame = (grid) => {
-  return !grid.canMove() || grid.reached2048;
+const getEndGameMessage = (won) =>  won ? MESSAGES.YOU_WIN : MESSAGES.GAME_OVER;
+
+const showMessage = (won) => {
+  const message = getEndGameMessage(won);
+  alert(message);
 };
 
 const endGame = (grid) => {
@@ -17,19 +18,13 @@ const endGame = (grid) => {
   resetGame(grid);
 };
 
-const showMessage = (won) => {
-  const message = getEndGameMessage(won);
-  alert(message);
-};
+const shouldEndGame = (grid) => !grid.canMove() || grid.reached2048;
 
-const getEndGameMessage = (won) => {
-  return won ? MESSAGES.YOU_WIN : MESSAGES.GAME_OVER;
-};
-
-const resetGame = (grid) => {
-  grid.clear();
-  grid.resetReached2048();
-  grid.setupGrid();
+const checkGameStatus = (grid) => {
+  if (!shouldEndGame(grid)) return;
+  setTimeout(() => {
+    endGame(grid);
+  }, END_GAME_DELAY);
 };
 
 export { checkGameStatus };

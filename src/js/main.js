@@ -6,9 +6,7 @@ const grid = new Grid(GRID_SIZE);
 
 const handleKeyDown = (event) => {
   const direction = KEY_TO_DIRECTION[event.key];
-  if (!direction) {
-    return;
-  }
+  if (!direction) return;
   grid.move(direction);
   if (grid.moved) {
     handleMoveResult();

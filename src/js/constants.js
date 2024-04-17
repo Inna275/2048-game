@@ -10,6 +10,8 @@ const FIRST_INDEX = 0;
 
 const END_GAME_DELAY = 300;
 
+const ANIMATION_DELAY = 100;
+
 const TILE_COLORS = {
   2: '#f91e52',
   4: '#fe8b4b',
@@ -76,6 +78,7 @@ export { GRID_SIZE,
          LAST_INDEX, 
          FIRST_INDEX,
          END_GAME_DELAY,
+         ANIMATION_DELAY,
          TILE_COLORS,
          KEY_TO_DIRECTION,
          MOVE_DATA, 

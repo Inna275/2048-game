@@ -1,14 +1,14 @@
-import { TWO_CHANCE, TILE_COLORS } from './constants.js';
+import { TWO_CHANCE, TILE_COLORS, ANIMATION_DELAY } from './constants.js';
 
 class Tile {
   constructor() {
-    this.value = this.getInitTileNumber();
+    this.value = Tile.getInitTileNumber();
     this.element = this.createTileElement();
     this.animateAppearance();
     this.merged = false;
   }
 
-  getInitTileNumber() {
+  static getInitTileNumber() {
     return Math.random() < TWO_CHANCE ? 2 : 4;
   }
 
@@ -23,7 +23,7 @@ class Tile {
   animateAppearance() {
     setTimeout(() => {
       this.element.style.transform = 'scale(1)';
-    }, 100);
+    }, ANIMATION_DELAY);
   } 
 
   doubleValue() {
