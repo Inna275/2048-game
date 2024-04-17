@@ -11,11 +11,15 @@ const handleKeyDown = (event) => {
   }
   grid.move(direction);
   if (grid.moved) {
-    if (!grid.reached2048) grid.addTile();
-    grid.resetMergedFlags();
-    grid.resetMoved();
-    checkGameStatus(grid);
+    handleMoveResult();
   }
+};
+
+const handleMoveResult = () => {
+  if (!grid.reached2048) grid.addTile();
+  grid.resetMergedFlags();
+  grid.resetMoved();
+  checkGameStatus(grid);
 };
 
 document.addEventListener('keydown', handleKeyDown);
