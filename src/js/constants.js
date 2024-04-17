@@ -8,6 +8,8 @@ const LAST_INDEX = GRID_SIZE - 1;
 
 const FIRST_INDEX = 0;
 
+const END_GAME_DELAY = 300;
+
 const TILE_COLORS = {
   2: '#f91e52',
   4: '#fe8b4b',
@@ -63,12 +65,19 @@ const MOVE_DATA = {
   },
 };
 
+const MESSAGES = {
+  YOU_WIN: 'Congratulations! You win!',
+  GAME_OVER: 'Game over. Try again!',
+};
+
 export { GRID_SIZE, 
          TWO_CHANCE, 
          START_TILES, 
          LAST_INDEX, 
          FIRST_INDEX,
+         END_GAME_DELAY,
          TILE_COLORS,
          KEY_TO_DIRECTION,
          MOVE_DATA, 
+         MESSAGES,
         };
