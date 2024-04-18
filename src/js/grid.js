@@ -183,7 +183,8 @@ class Grid {
   canMergeRight(row, col, currentCell) {
     if (col < LAST_INDEX) {
       const rightCell = this.cells[row][col + 1];
-      return rightCell.tile && this.isMergePossible(currentCell.tile, rightCell.tile);
+      const mergePossible = this.isMergePossible(currentCell.tile, rightCell.tile);
+      return rightCell.tile && mergePossible;
     }
     return false;
   }
@@ -191,7 +192,8 @@ class Grid {
   canMergeDown(row, col, currentCell) { 
     if (row < LAST_INDEX) {
       const downCell = this.cells[row + 1][col];
-      return downCell.tile && this.isMergePossible(currentCell.tile, downCell.tile);
+      const mergePossible = this.isMergePossible(currentCell.tile, downCell.tile);
+      return downCell.tile && mergePossible;
     }
     return false;
   }
